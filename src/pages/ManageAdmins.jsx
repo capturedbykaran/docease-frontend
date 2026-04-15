@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BASE_URL } from "../services/api";
 
 /*
 ====================================================
@@ -23,7 +24,7 @@ const ManageAdmins = () => {
 
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/api/admin", {
+      const res = await fetch(`${BASE_URL}/admin`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -66,7 +67,7 @@ const ManageAdmins = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch(`http://localhost:5000/api/admin/${id}`, {
+      const res = await fetch(`${BASE_URL}/admin/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

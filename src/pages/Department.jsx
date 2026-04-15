@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import DoctorCard from "../components/DoctorCard";
+import { BASE_URL } from "../services/api";
 
 const Department = () => {
   const { specialty } = useParams();
@@ -19,7 +20,7 @@ const Department = () => {
 
         // ✅ Correct fetch
         const res = await fetch(
-          `http://localhost:5000/api/doctors?specialization=${formattedSpecialty}&limit=100`
+          `${BASE_URL}/doctors?specialization=${formattedSpecialty}&limit=100`
         );
 
         const data = await res.json();

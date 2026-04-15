@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Star, MapPin, Calendar, Phone } from "lucide-react";
+import { BASE_URL } from "../services/api";
 
 /*
 ====================================================
@@ -27,7 +28,7 @@ const DoctorDetails = () => {
     const fetchDoctor = async () => {
       try {
         const res = await fetch(
-          `http://localhost:5000/api/doctors/${id}`
+          `${BASE_URL}/doctors/${id}`
         );
 
         const data = await res.json();

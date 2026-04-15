@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import DoctorCard from "../components/DoctorCard";
+import { BASE_URL } from "../services/api";
 
 /*
 ====================================================
@@ -45,7 +46,7 @@ const Doctors = () => {
         });
 
         const res = await fetch(
-          `http://localhost:5000/api/doctors?${query.toString()}`
+          `${BASE_URL}/doctors?${query.toString()}`
         );
 
         const data = await res.json();

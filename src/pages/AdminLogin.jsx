@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { BASE_URL } from "../services/api";
 /*
 ====================================================
 📌 Admin Login Page
@@ -45,7 +45,7 @@ const AdminLogin = () => {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:5000/api/admin/login", {
+      const res = await fetch(`${BASE_URL}/admin/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

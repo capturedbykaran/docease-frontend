@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { BASE_URL } from "../services/api";
 
 /*
 ====================================================
@@ -14,7 +15,7 @@ const ManageDoctors = () => {
 
   // 🔹 Fetch doctors
   const fetchDoctors = async () => {
-  const res = await fetch("http://localhost:5000/api/doctors");
+  const res = await fetch(`${BASE_URL}/doctors`);
   const data = await res.json();
 
   console.log("API DATA:", data); // 👈 debug once
@@ -30,7 +31,7 @@ const ManageDoctors = () => {
   const handleDelete = async (id) => {
     const token = localStorage.getItem("token");
 
-    await fetch(`http://localhost:5000/api/doctors/${id}`, {
+    await fetch(`${BASE_URL}/doctors/${id}`, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -61,7 +62,7 @@ const ManageDoctors = () => {
 
     const token = localStorage.getItem("token");
 
-    await fetch(`http://localhost:5000/api/doctors/${selectedDoctor.id}`, {
+    await fetch(`${BASE_URL}/doctors/${selectedDoctor.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

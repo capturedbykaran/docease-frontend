@@ -1,6 +1,6 @@
 // 📌 Central API configuration
 
-const BASE_URL = "http://localhost:5000/api";
+export const BASE_URL = `${import.meta.env.VITE_API_URL}/api`;
 
 // 🔥 Get all doctors with optional filters
 export const fetchDoctors = async (params = "") => {

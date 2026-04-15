@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Search } from "lucide-react";
 import { departmentsData } from "../utils/departmentsData";
+import { BASE_URL } from "../services/api";
 
 /*
 ====================================================
@@ -18,7 +19,7 @@ const Departments = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/departments/count")
+    fetch(`${BASE_URL}/departments/count`)
       .then((res) => res.json())
       .then((data) => {
         setCounts(data); // ✅ already in perfect format
