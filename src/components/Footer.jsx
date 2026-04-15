@@ -100,7 +100,7 @@ const Footer = () => {
 
               {/* GitHub */}
               <a
-                href="https://github.com/your-username"
+                href="https://github.com/capturedbykaran"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-gray-700 transition"
@@ -110,7 +110,7 @@ const Footer = () => {
 
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com/in/your-profile"
+                href="https://www.linkedin.com/in/captured-by-karan/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-lg bg-gray-800 hover:bg-gray-700 transition"
