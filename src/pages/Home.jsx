@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { fetchDoctors } from "../services/api";
 import DoctorCard from "../components/DoctorCard";
 import Hero from "../components/Hero";
+import Stats from "../components/Stats";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 /*
 ====================================================
@@ -30,6 +32,9 @@ const Home = () => {
   return (
     <>
       <Hero />
+
+      <WhyChooseUs />
+      <Stats /> 
 
       <section id="doctors" className="max-w-7xl mx-auto px-4 py-10">
         <h2 className="text-2xl font-bold mb-6">Top Doctors</h2>

@@ -16,16 +16,14 @@ const Hero = () => {
         {/* LEFT CONTENT */}
         <div data-aos="fade-right">
 
-          {/* Heading */}
           <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-gray-900">
-            Find the Right Doctor <br />
-            <span className="text-teal-600">for You</span>
+            Discover the Best Care <br />
+            <span className="text-teal-600">Without the Hassle</span>
           </h1>
 
-          {/* Subtext */}
           <p className="text-gray-600 mb-8 text-lg">
-            Connect with verified healthcare professionals in your area.
-            Quality care, convenient experience.
+            Find trusted doctors, compare expertise, and connect with the
+            right specialist — all in one place.
           </p>
 
           {/* Buttons */}
@@ -40,7 +38,7 @@ const Hero = () => {
             </Link>
 
             {/* Secondary CTA */}
-            <button
+            {/* <button
               onClick={() =>
                 document
                   .getElementById("how-it-works")
@@ -49,7 +47,7 @@ const Hero = () => {
               className="border px-6 py-3 rounded-lg hover:bg-gray-100 transition"
             >
               How It Works
-            </button>
+            </button> */}
           </div>
         </div>
 
